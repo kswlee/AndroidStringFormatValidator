@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AndroidStringFormatValidator</string>
+    <string name="sample_text">sample text with format: % s</string>
+</resources>
