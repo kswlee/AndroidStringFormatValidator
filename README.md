@@ -3,13 +3,13 @@
 The localizations of Android strings from crowdsourcing platform might break the string formatters. 
 
 ** Example: **
-
-    <!-- value/strings.xml -->
-	<string name="sample_text">sample text with format: %s</string>
+```xml
+<!-- value/strings.xml -->
+<string name="sample_text">sample text with format: %s</string>
 	
-	<!-- value-es/strings.xml -->
-	<string name="sample_text">sample text with format: % s</string>
-
+<!-- value-es/strings.xml -->
+<string name="sample_text">sample text with format: % s</string>
+```
 The %s formatting characters are broken after tranlsation. To identify such erros before releasing build, we can just add a custom gradle task, checkString, before the preBuild stage of the assemble task. 
 
 Ｗith the custom "checkString" task, the errors would be identified and displayed with the build ouput log: 
